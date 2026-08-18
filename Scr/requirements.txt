@@ -1,0 +1,47 @@
+# =============================================================================
+# "Hybrid TN-NTN Network Recommendation System using Deep Reinforcement Learning:
+ A Comparative Study of DQN, PPO, LSTM, and GRU Agents"
+# =============================================================================
+# Python 3.8+ required
+# Install with: pip install -r requirements.txt
+# =============================================================================
+
+# =============================================================================
+# CORE SCIENTIFIC LIBRARIES
+# =============================================================================
+numpy>=1.24.0          # Numerical computing
+pandas>=2.0.0          # Data manipulation and analysis
+scipy>=1.10.0          # Scientific computing (statistics, optimization)
+
+# =============================================================================
+# MACHINE LEARNING & DEEP LEARNING
+# =============================================================================
+torch>=2.0.0           # Deep Learning framework (PyTorch)
+scikit-learn>=1.2.0    # Machine Learning utilities
+gymnasium>=0.28.0      # Reinforcement Learning environment
+
+# =============================================================================
+# VISUALIZATION
+# =============================================================================
+matplotlib>=3.7.0      # Plotting and visualization
+seaborn>=0.12.0        # Statistical data visualization
+
+# =============================================================================
+# UTILITIES
+# =============================================================================
+tabulate>=0.9.0        # Pretty printing tables
+psutil>=5.9.0          # System monitoring (CPU, memory, etc.)
+pyyaml>=6.0.0          # YAML configuration files
+
+# =============================================================================
+# OPTIONAL BUT RECOMMENDED
+# =============================================================================
+tqdm>=4.65.0           # Progress bars
+colorama>=0.4.6        # Terminal colors (Windows support)
+
+# =============================================================================
+# FOR DEVELOPMENT
+# =============================================================================
+# pytest>=7.0.0        # Testing framework
+# black>=23.0.0        # Code formatter
+# flake8>=6.0.0        # Linter
