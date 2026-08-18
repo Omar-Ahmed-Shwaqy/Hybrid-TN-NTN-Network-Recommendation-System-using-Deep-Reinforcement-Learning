@@ -69,37 +69,125 @@ A **Deep Reinforcement Learning** system for intelligent network selection in hy
 | 🌊 **Maritime** | **GRU** ⚡ | SAT (LEO) | 42.2% | Best for maritime NTN conditions |
 | 🏜️ **Desert** | **PPO** 🏆 | HAPS | 44.4% | Best in harsh desert coverage |
 
----
-
 ## 📁 **Project Structure**
 📁 Hybrid TN-NTN Network Recommendation System/
 │
-├── 📄 README.md ← Project documentation
+├── 📁 .venv/ ← Virtual Environment
+│ ├── 📁 Lib/
+│ │ └── 📁 site-packages/ ← Installed Libraries (PyTorch, NumPy, etc.)
+│ ├── 📁 Scripts/ ← Executable Files (python.exe, pip.exe, etc.)
+│ └── 📁 share/ ← Additional Files
+│
+├── 📁 data_raw/ ← ✅ Raw Data
+│ └── Hybrid_Network_TN_NTN_Final.csv (10.9 MB)
+│
+├── 📁 Scr/ ← ✅ Source Code (Most Important)
+│ ├── 📄 recommender.py ← Recommendation System
+│ ├── 📄 requirements.txt ← Required Libraries
+│ ├── 📄 run_system.py ← Run Full System
+│ │
+│ ├── 📁 agents/ ← 🤖 RL Agents
+│ │ ├── base_agent.py ← Base Agent Class
+│ │ ├── dqn_agent.py ← DQN Agent
+│ │ ├── ppo_agent.py ← PPO Agent
+│ │ ├── lstm_agent.py ← LSTM Agent
+│ │ ├── gru_agent.py ← GRU Agent
+│ │ └── pycache/ ← Cache Files
+│ │
+│ ├── 📁 checkpoints/ ← Model Checkpoints
+│ │
+│ ├── 📁 data_preprocessing/ ← 📊 Data Processing
+│ │ ├── data_loader.py ← Load Data
+│ │ ├── data_splitter.py ← Split Data
+│ │ ├── feature_engineering.py ← Feature Engineering
+│ │ └── pycache/
+│ │
+│ ├── 📁 environment/ ← 🌍 Environment
+│ │ ├── hybrid_network_env.py ← Gymnasium Environment
+│ │ ├── reward_calculator.py ← Reward Calculation
+│ │ ├── state_builder.py ← State Construction
+│ │ └── pycache/
+│ │
+│ ├── 📁 training/ ← 🏋️ Training & Evaluation
+│ │ ├── evaluator.py ← Model Evaluation
+│ │ ├── trainer.py ← Model Training
+│ │ └── pycache/
+│ │
+│ └── 📁 utils/ ← 🔧 Helper Functions
+│ ├── constants.py ← Constants
+│ ├── helpers.py ← Helper Functions
+│ ├── pycache/
+│ │
+│ ├── 📁 core/ ← Core Utilities
+│ │ ├── file_utils.py
+│ │ ├── seed_utils.py
+│ │ ├── time_utils.py
+│ │ └── init.py
+│ │
+│ ├── 📁 data/ ← Data Utilities
+│ │ ├── network.py
+│ │ ├── normalize.py
+│ │ └── init.py
+│ │
+│ ├── 📁 stats/ ← Statistical Functions
+│ │ ├── accuracy.py
+│ │ ├── area.py
+│ │ ├── confidence.py
+│ │ ├── handover.py
+│ │ ├── reward.py
+│ │ └── init.py
+│ │
+│ └── 📁 viz/ ← Visualization Functions
+│ ├── save.py
+│ ├── style.py
+│ └── init.py
+│
+├── 📁 test_results/ ← ✅ Training Results
+│ ├── 📁 evaluation/ ← Evaluation Results
+│ │ ├── 📁 figures/ ← Figures
+│ │ │ ├── 📁 agents/ ← Per-Agent Figures
+│ │ │ ├── 📁 comparison/ ← Comparison Figures
+│ │ │ ├── 📁 handover/ ← Handover Analysis
+│ │ │ ├── 📁 qos/ ← QoS Analysis
+│ │ │ └── 📁 statistical/ ← Statistical Figures
+│ │ ├── 📁 handover_analysis/
+│ │ ├── 📁 qos_analysis/
+│ │ ├── 📁 reports/ ← Evaluation Reports
+│ │ ├── 📁 statistical/ ← Statistical Analysis
+│ │ └── 📁 user_tracking/ ← User Tracking Data
+│ │
+│ ├── 📁 logs/ ← Training Logs
+│ │ ├── dqn_history.json
+│ │ ├── ppo_history.json
+│ │ ├── lstm_history.json
+│ │ ├── gru_history.json
+│ │ └── training_20260818_185221.log
+│ │
+│ ├── 📁 models/ ← 🧠 Trained Models
+│ │ ├── dqn_model.pt ← DQN Model
+│ │ ├── ppo_model.pt ← PPO Model
+│ │ ├── lstm_model.pt ← LSTM Model
+│ │ └── gru_model.pt ← GRU Model
+│ │
+│ └── 📁 reports/ ← 📄 Reports
+│ ├── comparison_report.txt ← Comparison Report
+│ ├── comparison_table.csv ← Comparison Table
+│ └── recommendations.txt ← Area Recommendations
+│
+├── 📄 README.md ← Project Documentation
 ├── 📄 LICENSE ← MIT License
-├── 📄 .gitignore ← Git ignore file
-├── 📄 requirements.txt ← Python dependencies
+├── 📄 .gitignore ← Git Ignore File
+├── 📄 requirements.txt ← Python Dependencies
 │
-├── 📁 Scr/ ← Source code
-│ ├── 📁 agents/ ← RL Agents (DQN, PPO, LSTM, GRU)
-│ ├── 📁 data_preprocessing/ ← Data loading & processing
-│ ├── 📁 environment/ ← Gymnasium environment
-│ ├── 📁 training/ ← Trainer & Evaluator
-│ ├── 📁 utils/ ← Utilities & helpers
-│ └── 📄 run_system.py ← Main entry point
-│
-├── 📁 data_raw/ ← Dataset
-│ └── Hybrid_Network_TN_NTN_Final.csv
-│
-├── 📁 test_results/ ← Results & outputs
-│ ├── 📁 models/ ← Trained models (.pt)
-│ ├── 📁 reports/ ← Comparison reports
-│ ├── 📁 figures/ ← Visualizations
-│ └── 📁 logs/ ← Training logs
-│
-└── 📁 Visulization/ ← Legacy (can delete)
-
-text
-
+└── 📁 Visulization/ ← (Legacy - Can Delete)
+├── 1_kpi_curves_comparison.png
+├── 1_stacked_bar_network_by_area.png
+├── 2_grouped_bar_network_by_area.png
+├── 2_kpi_barchart_comparison_with_BER.png
+├── 3_kpi_cdf_comparison_with_BER.png
+├── combined_*_analysis.png (13 Files)
+├── download (1).png
+└── download.png
 ---
 
 ## 🚀 **Quick Start**
