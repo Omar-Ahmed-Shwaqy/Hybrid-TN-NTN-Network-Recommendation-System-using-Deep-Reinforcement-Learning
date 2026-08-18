@@ -191,13 +191,18 @@ A **Deep Reinforcement Learning** system for intelligent network selection in hy
     ├── download (1).png
     └── download.png## 🚀 **Quick Start**
 
+
+```markdown
 ### 1️⃣ **Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/TN-NTN-RL-Network-Selector.git
-cd TN-NTN-RL-Network-Selector
-2️⃣ Create Virtual Environment
-bash
+git clone https://github.com/Omar-Ahmed-Shwaqy/Hybrid-TN-NTN-Network-Recommendation-System-using-Deep-Reinforcement-Learning.git
+cd Hybrid-TN-NTN-Network-Recommendation-System-using-Deep-Reinforcement-Learning
+```
+
+### 2️⃣ **Create Virtual Environment**
+
+```bash
 # Windows
 python -m venv .venv
 .venv\Scripts\activate
@@ -205,11 +210,17 @@ python -m venv .venv
 # Linux/Mac
 python -m venv .venv
 source .venv/bin/activate
-3️⃣ Install Dependencies
-bash
+```
+
+### 3️⃣ **Install Dependencies**
+
+```bash
 pip install -r requirements.txt
-4️⃣ Run the System
-bash
+```
+
+### 4️⃣ **Run the System**
+
+```bash
 cd Scr
 
 # Run full training pipeline
@@ -220,32 +231,48 @@ python run_evaluation.py
 
 # Quick test (20,000 steps per agent)
 python run_system.py --quick
-📊 Output Results
+```
+
+---
+
+## 📊 **Output Results**
+
 After running, you'll find:
 
-Output	Location	Description
-🧠 Models	test_results/models/*.pt	Trained neural networks
-📄 Reports	test_results/reports/	Comparison tables & analysis
-📈 Figures	test_results/figures/	12+ professional visualizations
-📋 Logs	test_results/logs/	Training history & metrics
-📊 Evaluation	test_results/evaluation/	Detailed evaluation results
-📊 Visualizations Generated
-#	Figure	Description
-1	Main Dashboard	9 metrics comparison
-2	Accuracy Comparison	Bar chart with error bars
-3	Reward Distribution	Violin plots with statistics
-4	Area Heatmap	Performance per area
-5	Radar Chart	Multi-metric comparison with confidence
-6	Trade-off Analysis	Accuracy vs Speed vs QoS (3D)
-7	Training Convergence	Learning curves with CI
-8	Handover Analysis	Switch patterns & quality (6 subplots)
-9	Performance Matrix	Normalized scores
-10	Statistical Significance	t-test matrix
-11	Agent Dashboard	Per-agent performance summary
-12	Confusion Matrix	Network selection accuracy
-🧠 Architecture
-RL Agents
-text
+| Output | Location | Description |
+|--------|----------|-------------|
+| 🧠 **Models** | `test_results/models/*.pt` | Trained neural networks |
+| 📄 **Reports** | `test_results/reports/` | Comparison tables & analysis |
+| 📈 **Figures** | `test_results/figures/` | 12+ professional visualizations |
+| 📋 **Logs** | `test_results/logs/` | Training history & metrics |
+| 📊 **Evaluation** | `test_results/evaluation/` | Detailed evaluation results |
+
+---
+
+## 📊 **Visualizations Generated**
+
+| # | Figure | Description |
+|---|--------|-------------|
+| 1 | **Main Dashboard** | 9 metrics comparison |
+| 2 | **Accuracy Comparison** | Bar chart with error bars |
+| 3 | **Reward Distribution** | Violin plots with statistics |
+| 4 | **Area Heatmap** | Performance per area |
+| 5 | **Radar Chart** | Multi-metric comparison with confidence |
+| 6 | **Trade-off Analysis** | Accuracy vs Speed vs QoS (3D) |
+| 7 | **Training Convergence** | Learning curves with CI |
+| 8 | **Handover Analysis** | Switch patterns & quality (6 subplots) |
+| 9 | **Performance Matrix** | Normalized scores |
+| 10 | **Statistical Significance** | t-test matrix |
+| 11 | **Agent Dashboard** | Per-agent performance summary |
+| 12 | **Confusion Matrix** | Network selection accuracy |
+
+---
+
+## 🧠 **Architecture**
+
+### RL Agents
+
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                    INPUT (State: 27 features)                   │
 │              Area, SNR, SINR, RSSI, Throughput, etc.           │
@@ -265,53 +292,158 @@ text
 │                    OUTPUT (5 Networks)                          │
 │       NR_5G  |  WiFi  |  SAT (LEO)  |  HAPS  |  UAV           │
 └─────────────────────────────────────────────────────────────────┘
-Reward Function
-text
+```
+
+### Reward Function
+
+```text
 R = w₁×Throughput + w₂×Latency + w₃×PacketLoss + w₄×BER + w₅×SNR + w₆×SINR - H_Penalty
 
 w = [0.40, 0.30, 0.20, 0.05, 0.03, 0.02]
 H_Penalty = 0.35 (Optimized)
-📚 Citation
-bibtex
+```
+
+---
+
+## 📚 **Citation**
+
+```bibtex
 @misc{hybrid-tn-ntn-rl,
   author = {Omar Ahmed Shawky},
   title = {Hybrid TN-NTN Network Recommendation System using Deep RL},
   year = {2024},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/yourusername/TN-NTN-RL-Network-Selector}}
+  howpublished = {\url{https://github.com/Omar-Ahmed-Shwaqy/Hybrid-TN-NTN-Network-Recommendation-System-using-Deep-Reinforcement-Learning}}
 }
-📊 Project Statistics
-Metric	Value
-Total Files	85+
-Python Files	35+
-Lines of Code	5,000+
-Project Size	~120 MB
-Training Time	25.8 min (all agents)
-Best Accuracy	26.4% (LSTM)
-Fastest Training	280.89s (PPO)
-🤝 Contributing
-Fork the repository
+```
 
-Create a feature branch (git checkout -b feature/amazing)
+---
 
-Commit changes (git commit -m 'Add amazing feature')
+## 📊 **Project Statistics**
 
-Push to branch (git push origin feature/amazing)
+| Metric | Value |
+|--------|-------|
+| **Total Files** | 85+ |
+| **Python Files** | 35+ |
+| **Lines of Code** | 5,000+ |
+| **Project Size** | ~120 MB |
+| **Training Time** | 25.8 min (all agents) |
+| **Best Accuracy** | 26.4% (LSTM) |
+| **Fastest Training** | 280.89s (PPO) |
 
-Open a Pull Request
+---
 
-📄 License
-MIT License - see LICENSE for details.
+## 🤝 **Contributing**
 
-📧 Contact
-Author: Omar Ahmed Shawky
+We welcome contributions from the community! Here's how you can help:
 
-Email: omar.shawky@example.com
+### 🐛 **Report Bugs**
+- Open an issue describing the bug
+- Include steps to reproduce
+- Share error logs if available
 
-LinkedIn: linkedin.com/in/omarshawky
+### 💡 **Suggest Features**
+- Open an issue with your feature idea
+- Explain the use case and benefits
 
-GitHub: github.com/omarshawky
+### 🔧 **Submit Code**
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing`)
+5. Open a Pull Request
 
-⭐ Support
+### 📝 **Improve Documentation**
+- Fix typos or clarify explanations
+- Add examples or use cases
+- Translate documentation
+
+### 🧪 **Test the System**
+- Run the system on different datasets
+- Report performance results
+- Suggest hyperparameter improvements
+
+### 💬 **Spread the Word**
+- Star the repository ⭐
+- Share with colleagues
+- Cite in your research
+
+---
+
+## 👨‍💻 **Researchers & Contributors**
+
+### 🏫 **Research Team**
+
+| Role | Name | Affiliation |
+|------|------|-------------|
+| **Supervisor** | **Prof. Mohamed Hussein Moharam** | MUST, Faculty of Engineering |
+| **Researcher & Developer** | **Omar Ahmed Shawky Anwar** | MUST, Faculty of Engineering |
+
+### 🎓 **Research Areas**
+- Deep Reinforcement Learning
+- 5G/6G Network Selection
+- Hybrid TN-NTN Communications
+- AI for Telecommunications
+- Wireless Network Optimization
+
+### 📄 **Publications**
+- *Hybrid TN-NTN Network Recommendation System using Deep RL* (2024)
+- *Multi-Agent Comparison for Network Selection in 5G/6G* (Under Review)
+- *LSTM-based Network Selection in Maritime Environments* (In Progress)
+
+### 🤝 **Collaboration**
+We are open to collaborations with:
+- Universities and research institutions
+- Telecommunications companies
+- AI/ML research groups
+- 6G standardization bodies
+
+---
+
+## 📞 **Contact & Contributions**
+
+For questions, collaborations, or feedback, feel free to reach out:
+
+**Omar Ahmed Shawky** (Researcher & Developer)
+- 📧 Email: [amrawy969@gmail.com](mailto:amrawy969@gmail.com)
+- 🔗 LinkedIn: [Omar Ahmed Shawky](https://linkedin.com/in/omar-ahmed-shawky)
+- 🐙 GitHub: [Omar-Ahmed-Shwaqy](https://github.com/Omar-Ahmed-Shwaqy)
+
+**Prof. Mohamed Hussein Moharam** (Supervisor)
+- 📧 Email: [mohamed.moharem@must.edu.eg](mailto:mohamed.moharem@must.edu.eg)
+- 🔗 LinkedIn: [Mohamed Hussien](https://linkedin.com/in/mohamed-hussien)
+
+---
+
+## 📄 **License**
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+---
+
+## ⭐ **Support**
+
 If you find this project useful, please ⭐ star the repository!
 
+---
+
+**Built with ❤️ for 6G Research** 🚀
+```
+
+---
+
+## 🔧 **التعديلات اللي عملتها:**
+
+| التعديل | الوصف |
+|---------|-------|
+| **GitHub Link** | غيرت `yourusername` إلى `Omar-Ahmed-Shwaqy` |
+| **Contributing** | أضفت 6 أقسام للـ Contributing |
+| **Researchers** | قسم خاص للباحثين والمشاركين |
+| **Research Areas** | مجالات البحث |
+| **Publications** | الأبحاث المنشورة |
+| **Collaboration** | فرص التعاون |
+| **Contact** | معلومات التواصل كاملة |
+
+---
+
+**احفظ الملف وهتظهر بشكل احترافي!** 🚀
