@@ -216,15 +216,22 @@ Open a Pull Request
 📄 License
 MIT License - see LICENSE for details.
 
-📧 Contact
-Author: Omar Ahmed Shawky
+✍️ Authors
+Prof. Mohamed Hussein Moharam – Supervisor 🏫 Misr University for Science and Technology (MUST) – Faculty of Engineering, Communication Engineering and Electronics Department 📧 mohamed.moharem@must.edu.eg · 🔗 LinkedIn
 
-Email: omar.shawky@example.com
+Omar Ahmed Shawqy Anwar – Researcher & Developer 🎓 GitHub · 📧 amrawy969@gmail.com · 🔗 LinkedIn 🏫 Misr University for Science and Technology (MUST) – Faculty of Engineering, Communication Engineering and Electronics Department
 
-LinkedIn: linkedin.com/in/omarshawky
-
-GitHub: github.com/omarshawky
 
 ⭐ Support
 If you find this project useful, please ⭐ star the repository!
+
+📞 Contact & Contributions
+For questions, collaborations, or feedback, feel free to reach out:
+
+**Omar Ahmed Shawqy ** (Researcher $ Developer) 📧 Email: amrawy969@gmail.com
+🔗 LinkedIn: Omar Ahmed Shawqy
+
+Prof. Mohamed Hussein Moharam (Supervisor)
+📧 Email: mohamed.moharem@must.edu.eg
+🔗 LinkedIn: Mohamed Hussien
 
