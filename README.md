@@ -429,21 +429,3 @@ If you find this project useful, please ⭐ star the repository!
 
 **Built with ❤️ for 6G Research** 🚀
 ```
-
----
-
-## 🔧 **التعديلات اللي عملتها:**
-
-| التعديل | الوصف |
-|---------|-------|
-| **GitHub Link** | غيرت `yourusername` إلى `Omar-Ahmed-Shwaqy` |
-| **Contributing** | أضفت 6 أقسام للـ Contributing |
-| **Researchers** | قسم خاص للباحثين والمشاركين |
-| **Research Areas** | مجالات البحث |
-| **Publications** | الأبحاث المنشورة |
-| **Collaboration** | فرص التعاون |
-| **Contact** | معلومات التواصل كاملة |
-
----
-
-**احفظ الملف وهتظهر بشكل احترافي!** 🚀
